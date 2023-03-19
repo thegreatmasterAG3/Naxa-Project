@@ -1,0 +1,18 @@
+from rest_framework import serializers
+class ProjectSerializers(serializers.Serializer):
+    province = serializers.CharField()
+    district = serializers.CharField()
+    municipality = serializers.CharField()
+    project_title = serializers.CharField()
+    project_status = serializers.CharField()
+    donor = serializers.CharField()
+    executing_agency = serializers.CharField()
+    implementing_partner = serializers.CharField()
+    counterpart_ministry = serializers.CharField()
+    type_of_assistance = serializers.CharField()
+    budget_type = serializers.CharField()
+    humanitarian = serializers.BooleanField()
+    sector = serializers.CharField()
+    agreement_date = serializers.CharField()
+    commitments = serializers.DecimalField(max_digits=15, decimal_places=2)
+    disbursement = serializers.DecimalField(max_digits=15, decimal_places=2)
